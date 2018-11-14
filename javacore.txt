@@ -1,3 +1,30 @@
+1)armstrong number
+package sample;
+import java.util.*;
+
+public class MyArray {
+	public static void main(String[] args)
+	{
+		int n,temp,rem;
+		
+		System.out.println("Enter num");
+		Scanner s=new Scanner(System.in);
+		n=s.nextInt();
+		temp=n;
+		int r=0;
+		while(temp!=0)
+		{
+			
+			rem=temp%10;
+			r=r+(rem*rem*rem);
+			temp=temp/10;
+		}
+		if(n==r)
+			System.out.println("Armstrong");
+		else
+			System.out.println("not a Armstrong");
+	}
+}
 2)Find out all the Armstrong numbers falling in the range of 100-999
 =>>>
 package sample;
@@ -120,4 +147,29 @@ public class bubblesort {
 	      System.out.println(array[c]);
 	  }
 	}
-
+3)marks
+package sample;
+import java.util.*;
+public class Result {
+    public static void main(String[] args){
+    	Scanner s=new Scanner(System.in);
+    	int m1,m2,m3,r;
+    	m1=s.nextInt();
+    	m2=s.nextInt();
+    	m3=s.nextInt();
+    	if(m1>60&&m2>60&&m3>60)
+    	{
+    		System.out.println("Passed");
+    	}
+    	else if(m1>60&&m2>60||m1>60&&m3>60||m2>60&&m3>60)
+    			{
+    		System.out.println("Promoted");
+    		
+    			}
+    	else
+    	{
+    		System.out.println("Failed");
+    	}
+   
+    }
+}
