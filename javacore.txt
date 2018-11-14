@@ -1,0 +1,123 @@
+2)Find out all the Armstrong numbers falling in the range of 100-999
+=>>>
+package sample;
+
+public class Armstrong {
+	public static void main(String args[]){
+ 
+ int i,temp,rem;
+ 
+ for(i=100;i<=999;i++)
+ {
+	 int r=0;
+	 temp=i;
+	 while(temp!=0)
+	 {
+		 rem=temp%10;
+		 r=r+(rem*rem*rem);
+		 temp=temp/10;
+	 }
+	 if(r==i)
+		 System.out.println(i);
+	 
+ }
+}
+}
+
+3)Find out the simple as well as the compound interest of supplied value
+==>>
+package sample;
+import java.util.*;
+public class SiCi {
+	public static void main(String[] args){
+		Scanner s=new Scanner(System.in);
+		int p,r,t,si,ci;
+		p=s.nextInt();
+		r=s.nextInt();
+		t=s.nextInt();
+		si=(p*r*t)/100;
+		System.out.println(si);
+	}
+   7) search number
+==>>
+package sample;
+import java.util.Scanner;
+public class Searchnumber {
+	
+	
+	    public static void main(String[] args) 
+	    {
+	        int n, x, j = 0, i = 0;
+	       
+	       Scanner sc=new Scanner(System.in);
+	        int a[] = {5,12,14,6,78,19,1,23,26,35,37,7,52,86,47};
+	 
+	       n=a.length;
+	       
+	        for(i = 0; i < n-1; i++)
+	        {
+	        System.out.print("Enter the element you want to find:");
+	        x = sc.nextInt();
+	        for(i = 0; i < n; i++)
+	        {
+	            if(a[i] == x)
+	            {
+	                j = 1;
+	                break;
+	            }
+	            else
+	            {
+	                j = 0;
+	            }
+	        }
+	        if(j == 1)
+	        {
+	            System.out.println("Element found at Index:"+(i));
+	        }
+	        else
+	        {
+	            System.out.println("Element not found");
+	        }
+	        }
+	    
+}
+}
+
+
+8)bubble sort
+package sample;
+import java.util.*;
+public class bubblesort {
+	
+	  public static void main(String []args) {
+	    int n, c, d, swap;
+	    Scanner in = new Scanner(System.in);
+	 
+	    System.out.println("Input number of integers to sort");
+	    n = in.nextInt();
+	 
+	    int array[] = new int[n];
+	 
+	    System.out.println("Enter " + n + " integers");
+	 
+	    for (c = 0; c < n; c++)
+	      array[c] = in.nextInt();
+	   
+	    for (c = 0; c < ( n - 1 ); c++) {
+	      for (d = 0; d < n - c - 1; d++) {
+	        if (array[d] > array[d+1]) /* For descending order use < */
+	        {
+	          swap       = array[d];
+	          array[d]   = array[d+1];
+	          array[d+1] = swap;
+	        }
+	      }
+	    }
+	 
+	    System.out.println("Sorted list of numbers:");
+	 
+	    for (c = 0; c < n; c++)
+	      System.out.println(array[c]);
+	  }
+	}
+
