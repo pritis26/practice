@@ -1,0 +1,116 @@
+1)DessertItem.java
+package CoreJavaAssignment;
+
+abstract public class DessertItem {
+    
+	abstract public void getCost(int cost);
+}
+2)Candy.java
+package CoreJavaAssignment;
+
+public class Candy extends DessertItem {
+	
+	private int taxPercent=10;
+    public void getCost(int cost)
+    {
+
+    	int totalCost= cost + ((cost*taxPercent)/100);
+    	System.out.println("Your total cost in dollar is :"+totalCost/60);
+    }
+	
+}
+3)Cookie.java
+package CoreJavaAssignment;
+
+public class Cookie extends DessertItem{
+  
+	private int taxPercent=15;
+	public void getCost(int cost)
+	{
+		int totalCost=cost+((cost*taxPercent)/100);
+		System.out.println("Your total cost in Euro is "+totalCost/70);
+	}
+}
+4)IceCream.java
+package CoreJavaAssignment;
+
+public class IceCream extends DessertItem{
+       private int taxPercent=20;
+       
+       
+       public void getCost(int cost)
+       {
+    	   int totalCost;
+    	   totalCost=cost + ((cost*taxPercent)/100);
+    	   System.out.println("Your total cost is :"+ cost);
+       }
+}
+5)DesserRole.java
+package CoreJavaAssignment;
+import CoreJavaAssignment.Candy;
+import java.util.Scanner;
+public class DessertRole {
+    Scanner scanner=new Scanner(System.in);
+    
+	public void Dessert(){
+		
+	System.out.println("=========Welcome==========");
+	System.out.println("Enter login type 1 as a owner or 2 as a Customer " );
+	int input=scanner.nextInt();
+	
+   if(input==1)
+   {
+	   
+   }
+   else if (input==2)
+   {
+	   choice();
+   }
+   else
+   {
+	   System.out.println("Please enter correct number");
+   }
+	}
+    
+	public void choice()
+	{
+		System.out.println("==============");
+		System.out.println("-----------Menu-----------");
+		System.out.println("1. Candy ");
+		System.out.println("2. Cookie ");
+		System.out.println("3. IceCream ");
+		
+		System.out.println("Enter dessert number of your choice");
+		int choice=scanner.nextInt();
+		
+		switch(choice)
+		{
+		case 1 : int cost=260;
+		         Candy candy=new Candy();
+		         candy.getCost(cost);
+		         break;
+		         
+		case 2 : int cost2=300;
+		         Cookie cookie=new Cookie();
+		         cookie.getCost(cost2);
+		         break;
+		         
+		case 3 : int cost3=350;
+		         IceCream iceCream=new IceCream();
+		         iceCream.getCost(cost3);
+		         break;
+		
+		default : System.out.println("Please enter valid dish");         
+		}
+	}
+
+
+	
+	public static void main(String[] args) {
+	     DessertRole dessertRole=new DessertRole();
+	     dessertRole.Dessert();
+	}
+	
+}
+
+
