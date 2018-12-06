@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: #f9f9f9;
+}
+a {
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  text-decoration: none;
+}
+em {
+  font-style: oblique;
+}
+strong {
+  font-style: bold;
+}
+img {
+  width: 100%;
+}
+h1, h2, h3, h4, h5 {
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+}
+header{
+background:linear-gradient(rgba(224,204,200,1.0),rgba(224,204,200,0.90)),url(img/laptop.jpg);
+
+background-size:cover;
+background-position:centre top;
+width:100%;}
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #555;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+</style>
+</head>
+</html>
