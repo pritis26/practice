@@ -1,0 +1,33 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean id="question" class="org.priti.springframework.Question" >
+	<property name="questionid" value="1"/>
+	<property name="question" value="name famous countries"/>
+	
+	<property name="answer">
+         <list>
+            <value>INDIA</value>
+            <value>Pakistan</value>
+            <value>USA</value>
+            <value>UK</value>
+         </list>
+      </property>
+	<property name = "answer1">
+         <set>
+            <value>INDIA1</value>
+            <value>Pakistan1</value>
+            <value>USA1</value>
+            <value>USA1</value>
+         </set>
+      </property>
+      <property name = "answer2">
+         <map>
+            <entry key = "1" value = "INDIA2"/>
+            <entry key = "2" value = "Pakistan2"/>
+            <entry key = "3" value = "USA2"/>
+            <entry key = "4" value = "USA2"/>
+         </map>
+      </property>
+      </bean>
+	</beans>
