@@ -1,0 +1,48 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean  class="org.priti.springframework.Customer">
+	<property name="customerId" value="1"/>
+	<property name="customerName" value="priti"/>
+	<property name="customerContact" value="7021977932"/>
+	<property name="customerAddress">
+	<bean class="org.priti.springframework.Address">
+	<property name="street" value="m.g. road"/>
+	<property name="city" value="panvel"/>
+	<property name="state" value="maharashtra"/>
+	<property name="zip" value="410206"/>
+	<property name="country" value="india"/>
+	</bean>
+	</property>
+	</bean>
+	<bean class="org.priti.springframework.Question">
+	<property name="questionId" value="1"/>
+	<property name="question" value="Mention all collection framework interfaces"/>
+	<property name="answers" >
+	<list>
+	<value>List interface</value>
+	<value>Set interface</value>
+	<value>Map interface</value>
+	</list>
+	</property>
+	<property name="answer1" >
+	<set>
+	<value>List interface</value>
+	<value>Set interface</value>
+	<value>Map interface</value>
+	</set>
+	</property>
+	<property name="answer2" >
+	<map>
+	<entry key="1" value="map"></entry>
+		<entry key="2" value="hashmap"></entry>
+
+	
+	</map>
+	</property>
+	
+	</bean>
+	<bean class="org.priti.springframework.BankAccountController">
+	
+	</bean>
+</beans>
