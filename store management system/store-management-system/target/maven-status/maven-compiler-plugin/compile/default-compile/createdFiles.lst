@@ -1,0 +1,5 @@
+com\stms\store\management\system\StoreManagementSystemApplication.class
+com\stms\store\management\system\repository\ItemRepository.class
+com\stms\store\management\system\service\ItemService.class
+com\stms\store\management\system\model\Item.class
+com\stms\store\management\system\controller\ItemController.class
